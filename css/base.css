@@ -1,0 +1,148 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* Variables */
+html {
+  --primary-color: #f0a500;
+  --base-text-color: #1a1c20f5;
+  --dark-text-color: #1a1c20;
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "lato", sans-serif;
+  overflow-x: hidden;
+}
+main {
+  width: 100%;
+}
+section {
+  /* width: 100%; */
+  padding: 5rem 2.5rem;
+}
+.content-wrapper {
+  max-width: 1300px;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.section-header h3 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+.section-header h4 {
+  color: var(--dark-text-color);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.align-items-stretch {
+  align-items: stretch;
+}
+
+.col {
+  padding: 1rem 1.2rem;
+  width: 50%;
+}
+
+.col-3 {
+  padding: 1rem 1.2rem;
+  width: calc(100% / 3);
+}
+.col-4 {
+  padding: 1rem 1.2rem;
+  width: calc(100% / 4);
+  flex-wrap: nowrap;
+}
+
+.col-6 {
+  padding: 1rem 1.2rem;
+  width: calc(100% / 3);
+}
+.detail-col {
+  width: 50%;
+}
+.form-col {
+  width: 60%;
+}
+.card {
+  background-color: white;
+  border-radius: 3px;
+  /* box-shadow: 0 1px 5px 0px #6c6c6ee1; */
+  box-shadow: 0px 0px 10px 5px #d0c9c0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card .card-content {
+  margin-top: 0rem;
+}
+
+/* Media Query for table*/
+@media screen and (max-width: 962px) {
+  .col-3 {
+    padding: 1.5rem;
+    width: 100%;
+  }
+  .row {
+    flex-direction: row;
+  }
+  .col-4 {
+    flex-wrap: wrap;
+    width: calc(100% / 2);
+  }
+
+  .col-6 {
+    padding: 1.5rem;
+
+    width: calc(100% / 2);
+  }
+}
+
+/* Media Query for mobile*/
+@media screen and (max-width: 700px) {
+  section {
+    padding: 0rem;
+  }
+  .section-header {
+    margin-top: 2rem;
+  }
+  .row {
+    flex-direction: column;
+  }
+
+  .col,
+  .col-3,
+  .col-4 {
+    padding: 1.5rem;
+    width: 100%;
+  }
+
+  .col-6 {
+    width: 100%;
+  }
+}
